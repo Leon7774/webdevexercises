@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 6: JavaScript Interaction</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background: #2ecc71;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+      #counter {
+        font-size: 48px;
+        font-weight: bold;
+        margin: 20px 0;
+        color: #3498db;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Basics</h1>
+    <p>JavaScript allows us to make our pages interactive and dynamic.</p>
+
+    <div>
+      <h2 id="counter">0</h2>
+      <button id="incrementBtn">Click Me!</button>
+    </div>
+
+    <script>
+      // 1. Find the elements on the page we want to interact with
+      const button = document.getElementById("incrementBtn");
+      const counterDisplay = document.getElementById("counter");
+
+      // 2. We keep track of our data
+      let count = 0;
+
+      // 3. We listen for "click" events on our button
+      button.addEventListener("click", function () {
+        // Increase count by 1
+        count = count + 1;
+
+        // Update the HTML text to show the new count
+        counterDisplay.textContent = count;
+
+        // Bonus: let's change color when it reaches 5!
+        if (count === 5) {
+          counterDisplay.style.color = "#e74c3c";
+          button.textContent = "You clicked 5 times!";
+          button.style.background = "#e74c3c";
+        }
+      });
+    </script>
+
+    <p style="margin-top: 40px">
+      <em>Exercise: Can you add a second button that decreases the counter?</em>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS WebDev Workshop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4 font-sans text-gray-800"
+  >
+    <div class="max-w-4xl w-full text-center">
+      <div
+        id="header-container"
+        class="relative inline-block cursor-pointer select-none group w-full h-full min-h-[100px]"
+      >
+        <h1
+          id="title-btn"
+          class="text-4xl font-extrabold mb-2 mt-8 text-orange-600 transition-transform active:scale-95 hover:text-orange-500 z-50"
+        >
+          CSS WebDev Workshop
+        </h1>
+        <!-- Emojis will go here in the JS -->
+      </div>
+
+      <div
+        id="score-wrapper"
+        class="h-6 mb-4 transition-opacity duration-300 opacity-0 relative z-10"
+      >
+        <span
+          id="score-display"
+          class="text-orange-500 font-bold bg-orange-100 px-3 py-1 rounded-full text-sm"
+        >
+          Combo: 0 🔥
+        </span>
+      </div>
+
+      <p class="text-lg text-gray-600 mb-8 relative z-10">
+        A progression from pure HTML to React.
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-3 text-left relative z-10">
+        <!-- Static Examples -->
+        <div
+          class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+        >
+          <h2 class="text-xl font-bold mb-4 text-gray-700 border-b pb-2">
+            Static HTML & CSS
+          </h2>
+          <div class="space-y-3">
+            <a
+              href="./exercises/1-html/index.html"
+              class="block p-3 rounded-lg bg-gray-50 hover:bg-blue-50 hover:text-blue-600 transition-colors group"
+            >
+              <span class="font-semibold">Level 1: Pure HTML</span>
+              <p class="text-sm text-gray-500 mt-1">
+                Structure and semantics only.
+              </p>
+            </a>
+            <a
+              href="./exercises/2-things-i-like/index.html"
+              class="block p-3 rounded-lg bg-gray-50 hover:bg-blue-50 hover:text-blue-600 transition-colors group"
+            >
+              <span class="font-semibold">Level 2: Things I Like</span>
+              <p class="text-sm text-gray-500 mt-1">
+                Create your own web page.
+              </p>
+            </a>
+            <a
+              href="./exercises/3-make-me-dark/index.html"
+              class="block p-3 rounded-lg bg-gray-50 hover:bg-blue-50 hover:text-blue-600 transition-colors group"
+            >
+              <span class="font-semibold">Level 3: Make Me Dark</span>
+              <p class="text-sm text-gray-500 mt-1">A quick CSS challenge.</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- CSS & JS Basics -->
+        <div
+          class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+        >
+          <h2 class="text-xl font-bold mb-4 text-gray-700 border-b pb-2">
+            Styling & JS Basics
+          </h2>
+          <div class="space-y-3">
+            <a
+              href="./exercises/4-css-styling/index.html"
+              class="block p-3 rounded-lg bg-gray-50 hover:bg-green-50 hover:text-green-600 transition-colors group"
+            >
+              <span class="font-semibold">Level 4: CSS Styling Basics</span>
+              <p class="text-sm text-gray-500 mt-1">
+                Colors, fonts, and borders.
+              </p>
+            </a>
+            <a
+              href="./exercises/5-css-layout/index.html"
+              class="block p-3 rounded-lg bg-gray-50 hover:bg-green-50 hover:text-green-600 transition-colors group"
+            >
+              <span class="font-semibold">Level 5: CSS Flexbox</span>
+              <p class="text-sm text-gray-500 mt-1">
+                Laying out elements side-by-side.
+              </p>
+            </a>
+            <a
+              href="./exercises/6-js-interaction/index.html"
+              class="block p-3 rounded-lg bg-gray-50 hover:bg-green-50 hover:text-green-600 transition-colors group"
+            >
+              <span class="font-semibold">Level 6: JS Interaction</span>
+              <p class="text-sm text-gray-500 mt-1">
+                Adding event listeners and state.
+              </p>
+            </a>
+          </div>
+        </div>
+
+        <!-- React Examples -->
+        <div
+          class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow ring-2 ring-purple-100"
+        >
+          <h2 class="text-xl font-bold mb-4 text-purple-700 border-b pb-2">
+            React
+          </h2>
+          <div class="space-y-3">
+            <a
+              href="./exercises/7-react-basics/index.html"
+              class="block p-3 rounded-lg bg-purple-50 hover:bg-purple-100 hover:text-purple-700 transition-colors group"
+            >
+              <span class="font-semibold">Level 7: React First Steps</span>
+              <p class="text-sm text-gray-500 mt-1">
+                Building UI with components.
+              </p>
+            </a>
+            <a
+              href="./exercises/8-boss-fight/index.html"
+              class="block p-3 rounded-lg bg-red-50 hover:bg-red-100 hover:text-red-700 transition-colors group border border-red-200"
+            >
+              <span class="font-semibold text-red-600"
+                >Level 8: Boss Fight! 👾</span
+              >
+              <p class="text-sm text-gray-500 mt-1">
+                Build your own interactive React page.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer
+        class="mt-12 flex items-center justify-center text-gray-400 text-sm pb-10 relative z-10"
+      >
+        <div class="flex items-center justify-center">
+          <!-- SVG Placeholder logo like user's logo.svg -->
+          <svg class="w-8 h-8 mr-2 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+          <p>Computer Science Society</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      let score = 0;
+      const titleBtn = document.getElementById("title-btn");
+      const scoreWrapper = document.getElementById("score-wrapper");
+      const scoreDisplay = document.getElementById("score-display");
+      const headerContainer = document.getElementById("header-container");
+
+      titleBtn.addEventListener("click", (e) => {
+        score++;
+
+        // Calculate floating emoji source position
+        // Using global coordinates handles both relative and fixed states properly
+        const x = e.clientX;
+        const y = e.clientY;
+
+        const emojis = ["🚀", "💻", "✨", "🔥", "⚡️", "🎉", "👾"];
+        const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+        const newEmoji = document.createElement("div");
+        newEmoji.innerText = randomEmoji;
+        // Fixed ensures it floats properly no matter the scroll position
+        newEmoji.className =
+          "fixed text-2xl font-sans pointer-events-none animate-ping z-0";
+        // Center the emoji visually where the cursor dropped
+        newEmoji.style.left = `${x - 10}px`;
+        newEmoji.style.top = `${y - 20}px`;
+
+        document.body.appendChild(newEmoji);
+
+        setTimeout(() => {
+          newEmoji.remove();
+        }, 1000);
+
+        // Handle text update
+        let scoreText = `Combo: ${score} 🔥`;
+        if (score >= 10 && score < 50) scoreText += " (Unstoppable!)";
+        if (score >= 50) scoreText += " (Godlike!)";
+        scoreDisplay.innerText = scoreText;
+
+        scoreWrapper.classList.remove("opacity-0");
+        scoreWrapper.classList.add("opacity-100");
+
+        // Make title jump around
+        if (score > 0) {
+          titleBtn.classList.add(
+            "fixed",
+            "transition-all",
+            "whitespace-nowrap",
+          );
+          titleBtn.classList.remove("transition-transform", "mb-2", "mt-8");
+
+          // Center on X and Y completely
+          titleBtn.style.transform = "translate(-50%, -50%)";
+          titleBtn.style.left = `${Math.max(10, Math.min(80, Math.random() * 100))}%`;
+          titleBtn.style.top = `${Math.max(10, Math.min(90, Math.random() * 100))}vh`;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boss Fight: Your Own React Page</title>
+    <!-- Load React from CDN for learning purposes without a build step -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- Load Babel to compile JSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #e74c3c;
+        font-size: 36px;
+        border-bottom: 3px solid #e74c3c;
+        padding-bottom: 10px;
+      }
+      .instructions {
+        background: #fdf2f0;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #e74c3c;
+        margin-bottom: 40px;
+      }
+      .instructions h2 {
+        margin-top: 0;
+        color: #c0392b;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>👾 Boss Fight: Create Your Own React Page!</h1>
+
+    <div class="instructions">
+      <h2>Your Mission</h2>
+      <p>
+        Now it's your turn. Using what you've learned about HTML, CSS,
+        JavaScript, and React, we want you to build your very own React
+        application!
+      </p>
+      <ul>
+        <li style="margin-bottom: 8px">
+          <strong>Open the React Starter Repository</strong> (the same one you
+          used in exercise 7).
+        </li>
+        <li style="margin-bottom: 8px">
+          <strong>Create at least one new React component.</strong>
+        </li>
+        <li style="margin-bottom: 8px">
+          <strong>Use state</strong> (<code>useState</code>) to make something
+          interactive (like a counter, a text input, or a toggle).
+        </li>
+        <li>
+          <strong>Style it</strong> to make it look awesome! Use regular CSS or
+          explore CSS modules.
+        </li>
+      </ul>
+      <p
+        style="
+          margin-top: 20px;
+          font-weight: bold;
+          color: #c0392b;
+          font-size: 1.1em;
+          border-top: 1px solid #eba49e;
+          padding-top: 15px;
+        "
+      >
+        🚨 Build your final project inside the React Starter Repository to show
+        off what you've learned!
+      </p>
+    </div>
+
+    <!-- Your React App will go here -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // 1. Create your component here!
+      function Instructions() {
+        return (
+          <div
+            style={{
+              padding: "40px 20px",
+              border: "2px dashed #e74c3c",
+              borderRadius: "8px",
+              textAlign: "center",
+              background: "#fff",
+            }}
+          >
+            <h2 style={{ color: "#e74c3c", marginTop: 0 }}>
+              Time to leave the nest! 🦅
+            </h2>
+            <p
+              style={{
+                fontSize: "18px",
+                maxWidth: "500px",
+                margin: "0 auto",
+                lineHeight: "1.5",
+              }}
+            >
+              There's no placeholder code to edit here anymore. Open up the
+              React Starter Repository in your editor and start building your
+              masterpiece there!
+            </p>
+          </div>
+        );
+      }
+
+      // 2. Render it to the screen
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<Instructions />);
+    </script>
+  </body>
+</html>

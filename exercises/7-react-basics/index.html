@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 7: React Basics</title>
+    <!-- Load React from CDN for learning purposes without a build step -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- Load Babel to compile JSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .react-card {
+        border: 2px solid #61dafb;
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 300px;
+        text-align: center;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        padding: 8px 16px;
+        background: #61dafb;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        color: #282c34;
+      }
+      button:hover {
+        background: #4fa8c8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>React First Steps</h1>
+    <p>
+      React is a popular JavaScript library for building user interfaces using
+      "Components".
+    </p>
+
+    <!-- This is the empty div where React will inject our app -->
+    <div id="root"></div>
+
+    <!-- Note type="text/babel", which tells Babel to compile this React code -->
+    <script type="text/babel">
+      // This is a React Component! It looks like a JavaScript function that returns HTML-like syntax called JSX.
+      function CounterCard() {
+        // React state allows us to keep track of changing data simply
+        const [count, setCount] = React.useState(0);
+
+        function handleIncrement() {
+          setCount(count + 1);
+        }
+
+        return (
+          <div className="react-card">
+            <h2>React Counter</h2>
+            <p
+              style={{ fontSize: "48px", margin: "20px 0", fontWeight: "bold" }}
+            >
+              {count}
+            </p>
+            <button onClick={handleIncrement}>Increment</button>
+          </div>
+        );
+      }
+
+      // This is where we tell React to render our component into the root div
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<CounterCard />);
+    </script>
+
+    <div
+      style="
+        margin-top: 30px;
+        padding: 20px;
+        background: #fdf2f0;
+        border-radius: 8px;
+        border-left: 4px solid #e74c3c;
+        text-align: left;
+        max-width: 600px;
+      "
+    >
+      <h3 style="margin-top: 0; color: #c0392b">
+        Exercise: Move to the React Starter Repo
+      </h3>
+      <p>
+        Notice how similar the React code is to HTML! Instead of writing more
+        code in this repository, let's move to a real React project setup.
+      </p>
+      <ol style="margin-bottom: 0">
+        <li style="margin-bottom: 8px">
+          Open the <strong>React Starter Repository</strong> provided by your
+          instructor.
+        </li>
+        <li style="margin-bottom: 8px">
+          Clone or download the repository to your computer.
+        </li>
+        <li style="margin-bottom: 8px">
+          Open it in your terminal and run <code>npm install</code> to install
+          dependencies.
+        </li>
+        <li style="margin-bottom: 8px">
+          Start the dev server with <code>npm run dev</code>.
+        </li>
+        <li>
+          Open the project in your editor. Find the exercise 7 component, and
+          try adding a second button that resets the count to 0!
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>

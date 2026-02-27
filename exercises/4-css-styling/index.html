@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4: CSS Styling Basics</title>
+    <style>
+      /* 
+      Welcome to CSS!
+      CSS stands for Cascading Style Sheets. It describes how HTML elements are displayed on screen.
+      Try changing the colors, fonts, and sizes below.
+    */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      .card {
+        /* Background and Border */
+        background-color: white;
+        border: 2px solid #ddd;
+        border-radius: 8px; /* Rounded corners! */
+
+        /* Spacing */
+        padding: 20px; /* Space inside the border */
+        margin: 20px; /* Space outside the border */
+
+        /* Size */
+        max-width: 400px;
+      }
+
+      h1 {
+        color: #2c3e50;
+      }
+
+      button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Style Me!</h1>
+      <p>
+        This is a plain HTML card, but with the power of CSS, we can make it
+        look like a real beautiful component.
+      </p>
+      <button>Click Me</button>
+    </div>
+
+    <p>
+      <em
+        >Exercise: Change the background color of the body, and make the button
+        red!</em
+      >
+    </p>
+  </body>
+</html>

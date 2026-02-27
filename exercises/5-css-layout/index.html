@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 5: CSS Flexbox Layout</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+      }
+
+      .container {
+        /* This single line turns the container into a Flexbox! */
+        display: flex;
+
+        /* Try changing this to 'column' */
+        flex-direction: row;
+
+        /* Try changing this to 'center' or 'space-between' */
+        justify-content: space-around;
+
+        /* Try changing this to 'center' or 'stretch' */
+        align-items: center;
+
+        background-color: #eee;
+        padding: 20px;
+        border-radius: 8px;
+        height: 200px; /* Just to show vertical alignment */
+      }
+
+      .box {
+        width: 80px;
+        height: 80px;
+        background-color: #e74c3c;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        border-radius: 4px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Flexbox</h1>
+    <p>
+      Flexbox makes it easy to align items horizontally or vertically. It is one
+      of the most powerful and common layout tools.
+    </p>
+
+    <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+
+    <p>
+      <em
+        >Exercise: Change the flex-direction to 'column' and see what happens to
+        the boxes!</em
+      >
+    </p>
+  </body>
+</html>
